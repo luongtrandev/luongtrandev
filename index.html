@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <!--Phan dau-->
+    <head>
+        <title>LUONG_VAN_DAT</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <script>
+            function myfunc (){
+                document.getElementById("main").innerHTML = " Script";
+            }
+        </script>
+        <style>
+            .k{
+                color: blue;
+                background-color: aquamarine;
+             }
+        </style>
+    </head>
+
+    <!-- PHAN THAN -->
+    <body>
+        <div>
+            <!-- <h1 id="main">Nga phạt Wikimedia đăng nội dung không xác thực về cuộc xung đột tại Ukraine</h1>
+
+            <h1 id="mai">Nga phạt Wikimedia đăng nội dung</h1>
+            <button type="button" onclick="myfunc()">button</button>
+            <h1 id="ni">c thực về cuộc xung đột t</h1>
+
+            <script>
+                let x=5;
+                let y=2;
+                let z=x+y;
+                document.getElementById("ni").innerHTML = z;
+                
+            </script>
+            <p id="ok"></p>
+            <script> 
+                const person = {
+                firstName : "John",
+                lastName  : "Doe",
+                age       : 50,
+                eyeColor  : "blue"
+                };
+                
+                document.getElementById("ok").innerHTML =
+                person.firstName + " is " + person.age + " years old.";
+            </script>
+            <p id="ooo"></p>
+            <script>
+                function myFunction(a, b) {
+                    return a *b;
+                }
+                document.getElementById("ooo").innerHTML = myFunction(4, 3);
+            </script>
+            <p id="oi"></p>
+            <script>    
+                const car = {type:"car", model:"500",color:"black"}
+                document.getElementById("oi").innerHTML = "this is " + car.type;
+            </script>
+            <p id="mo"></p>
+
+            <script>
+            let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("mo").innerHTML = text.length;
+            </script>
+
+            <p id="aa"></p>
+
+            <script>
+            let str = "Apple, Banana, Kiwi";
+            document.getElementById("aa").innerHTML = str.slice(7);
+            </script>
+
+            <p id="avc"></p>
+            <script>
+            let firstName = "John";
+            let lastName = "Doe";
+
+            let text4 = `Welcome ${firstName}, ${lastName}!`;
+
+            document.getElementById("avc").innerHTML = text4;
+            </script>
+
+            
+            <button onclick="myFunction1()">Sort Alphabetically</button>
+            <button onclick="myFunction2()">Sort Numerically</button> -->
+
+            <p>
+                <mat-toolbar>
+                 <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                  <mat-icon>menu</mat-icon>
+                </button>
+                <span>My App</span>
+                <span class="example-spacer"></span>
+                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                  <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                 <mat-icon>share</mat-icon>
+               </button>
+              </mat-toolbar>
+              </p>
+            
+            <button onclick="myFunction2()">Sort </button>
+            <p id="sort"></p>
+            <p id="nn"></p>
+
+            <script>
+            const points = [40, 100, 1, 5, 25, 10];
+            document.getElementById("sort").innerHTML = points;  
+
+            
+            function myFunction2() {
+            points.sort(function(a, b){return a - b});
+            document.getElementById("nn").innerHTML = points;
+            }
+            </script>
+
+
+            <button onclick="myFunction6()">Bubble Sort</button>
+            <p id="dd"></p>
+            <p id="ss"></p>
+            <script>
+                const points1 = [40, 100, 1, 5, 25, 10];
+                document.getElementById("dd").innerHTML = points1;  
+                
+                function myFunction6() {
+                for (let i = 0; i < points1.length-1; i++) {
+                    for(let j =i+1;j<points1.length;j++ ){
+                        if(points1[j]<points1[i]){
+                            let k = points1[i];
+                            points1[i] = points1[j];
+                            points1[j] = k;
+                        }    
+                    }
+                    document.getElementById("ss").innerHTML = points1; 
+                }
+                
+                }
+            </script>
+
+
+            <script>
+                function swap(arr, i, j) {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+                function part(arr, low, high) {
+                let pivot = arr[high];
+                let i = (low - 1);
+                for (let j = low; j <= high - 1; j++) {
+                    if (arr[j] < pivot) {
+                        i++;
+                        swap(arr, i, j);
+                    }
+                }
+                swap(arr, i + 1, high);
+                return (i + 1);
+                }
+                function quickSort(arr, low, high) {
+                    if (low < high) {
+                        let p = part(arr, low, high);
+                        quickSort(arr, low, p - 1);
+                        quickSort(arr, p + 1, high);
+                    }
+                }
+                function printArray(arr, size) {
+                    for (let i = 0; i < size; i++)
+                        document.write(arr[i] + " ");
+                
+                    document.write("<br>");
+                }
+                let arr = [10, 7, 8, 9, 1, 5];
+                let n = 6;
+                quickSort(arr, 0, n - 1);
+                document.write("Quick Sorted:<br> ");
+                printArray(arr, n);
+            </script>
+                        
+
+            <!-- document.getElementById() -->
+            <!-- <button type="button" onclick="document.getElementById('in').style.fontSize='25px'">Click Me!</button>
+
+            <button type="button" onclick="document.getElementById('mai').style.display='none'">Click!</button>
+            <button type="button" onclick="document.getElementById('mai').style.display='block'">me!</button>
+
+            <button type="button" onclick='document.getElementById("main").innerHTML = "Hello JavaScript!"'>dang nhap</button>
+
+            <button onclick="document.getElementById('myImage').src='download.jpg'">Turn on the light</button>
+            <img id="myImage" src="dow.png" style="width:200px">
+            <button onclick="document.getElementById('myImage').src='dow.png'">Turn off the light</button>
+            <!-- end -->
+
+            <!-- <p id="in">Theo các tài liệu được trình bày tại phiên tòa, lý do Wikimedia bị xử phạt là do đăng 
+                7 bài viết trên trang Wikipedia với các nội dung không đúng về hoạt động của lực lượng vũ trang Nga ở Ukraine,
+                 trong đó có việc phá hủy các bệnh viện và nhà hát ở thành phố Mariupol. Đây là lần đầu tiên Wikimedia bị quy trách nhiệm hành chính theo điều khoản trên.</p>
+            <img src="https://img.nhandan.com.vn/Files/Images/2022/04/27/1-1651050894517.jpg" alt="anh hay" style="width: 300px;">
+            <a href="https://www.w3schools.com/js/js_datatypes.asp">Toi trang hoc</a> --> 
+        </div>
+    </body>
+</html>
